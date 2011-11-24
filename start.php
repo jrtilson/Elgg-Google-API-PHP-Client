@@ -21,7 +21,7 @@
  * elgg_load_library('gapc:apiClient');       // Main client * MUST BE LOADED *
  * elgg_load_library('gapc:apiBooksService'); // Books service
  */
-elgg_register_event_handler('init', 'system', 'google_api_client_init');
+elgg_register_event_handler('init', 'system', 'google_api_client_init', 1);
 
 function google_api_client_init() {
 	$api_root = elgg_get_plugins_path() . 'google-api-php-client/vendors/google-api-php-client/';
@@ -35,8 +35,7 @@ function google_api_client_init() {
 	while (FALSE !== ($file = readdir($contrib))) {
 		if ($file != "." && $file != "..") {
 			$basename = substr($file, 0, strrpos($file, '.'));
-			elgg_dump($basename);
-			elgg_register_library('gapc:' . $basename, $api_root . 'src/contrib/apiAdsenseService.php');
+			elgg_register_library('gapc:' . $basename, $api_root . "src/contrib/{$basename}.php");
 		}
 	}
 }
