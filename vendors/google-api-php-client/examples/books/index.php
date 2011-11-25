@@ -24,7 +24,7 @@ include 'interface.html';
 
 $client = new apiClient();
 // Visit https://code.google.com/apis/console to generate your client's Developer Key.
-//$client->setDeveloperKey('AIzaSyDJHyZ01nO_t4C2ZrYGYT7pk2BWoRgZ3KE');
+//$client->setDeveloperKey('insert_your_developer_key');
 $client->setApplicationName("Books_Example_App");
 $service = new apiBooksService($client);
 
