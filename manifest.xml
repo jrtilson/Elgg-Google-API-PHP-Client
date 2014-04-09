@@ -10,8 +10,8 @@
 	<copyright>See COPYRIGHT.txt</copyright>
 	<license>Apache License Version 2.0</license>
 	<requires>
-		<type>elgg_version</type>
-		<version>2011061200</version>
+		<type>elgg_release</type>
+		<version>1.8</version>
 	</requires>
 	<activate_on_install>true</activate_on_install>
 </plugin_manifest>
