@@ -24,7 +24,7 @@
 elgg_register_event_handler('init', 'system', 'google_api_client_init', 1);
 
 function google_api_client_init() {
-	$api_root = elgg_get_plugins_path() . 'google-api-php-client/vendors/google-api-php-client-1.0.1-beta/src';
+	$api_root = elgg_get_plugins_path() . 'google-api-php-client/vendors/google-api-php-client-1.0.5-beta/src';
 
 	set_include_path(get_include_path() . PATH_SEPARATOR . $api_root);
 

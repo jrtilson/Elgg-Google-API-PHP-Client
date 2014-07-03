@@ -29,6 +29,10 @@ $client_id = '<YOUR_CLIENT_ID>';
 $client_secret = '<YOUR_CLIENT_SECRET>';
 $redirect_uri = '<YOUR_REDIRECT_URI>';
 
+$client_id = '457638080903-6t6jnm5ro3up46o237h3kd5il7i7kn30.apps.googleusercontent.com';
+$client_secret = 'jKNOX50mATnLZ6n7E-R9th_z';
+$redirect_uri = 'https://spotdev19.net/googleapps/auth/callback';
+
 $client = new Google_Client();
 $client->setClientId($client_id);
 $client->setClientSecret($client_secret);
@@ -81,11 +85,16 @@ if ($client->getAccessToken()) {
 
 echo pageHeader("User Query - Retrieving An Id Token");
 if (
-    $client_id == '<YOUR_CLIENT_ID>'
-    || $client_secret == '<YOUR_CLIENT_SECRET>'
-    || $redirect_uri == '<YOUR_REDIRECT_URI>') {
+    $client_id == '457638080903-6t6jnm5ro3up46o237h3kd5il7i7kn30.apps.googleusercontent.com'
+    || $client_secret == 'jKNOX50mATnLZ6n7E-R9th_z'
+    || $redirect_uri == 'https://spotdev19.net/googleapps/auth/callback') {
   echo missingClientSecretsWarning();
 }
+/*
+$client_id = '457638080903-6t6jnm5ro3up46o237h3kd5il7i7kn30.apps.googleusercontent.com';
+$client_secret = 'jKNOX50mATnLZ6n7E-R9th_z';
+$redirect_uri = 'https://spotdev19.net/action/google/auth/callback';
+*/
 ?>
 <div class="box">
   <div class="request">
